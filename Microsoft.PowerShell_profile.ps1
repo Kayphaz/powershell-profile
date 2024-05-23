@@ -256,6 +256,9 @@ Set-PSReadLineOption -Colors @{
     String = 'DarkCyan'
 }
 
+# Starship Config
+$ENV:STARSHIP_CONFIG = "$HOME\.config\starship.toml"
+
 ## Final Line to set prompt
 Invoke-Expression (&starship init powershell)
 if (Get-Command zoxide -ErrorAction SilentlyContinue) {
